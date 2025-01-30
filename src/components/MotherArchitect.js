@@ -6,6 +6,7 @@ import {
   Ruler, CircleDot, Triangle
 } from 'lucide-react';
 
+// SketchIcon Component - משאירים בדיוק כמו שהיה
 const SketchIcon = ({ children, size = "normal" }) => {
   const sizeClasses = size === "large" ? "opacity-80" : "opacity-90";
   return (
@@ -28,10 +29,11 @@ const MotherArchitect = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-rose-50 to-amber-50 p-8" dir="rtl">
       <div className="max-w-6xl mx-auto">
-        {/* Header with Architectural Elements */}
+        {/* Header Section */}
         <div className="relative mb-20">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-100 via-rose-100 to-amber-100 rounded-3xl opacity-20"></div>
           <div className="relative bg-white rounded-3xl p-16 text-center border border-amber-100 shadow-xl overflow-hidden">
+            {/* שומרים על כל האלמנטים העיצוביים */}
             <div className="absolute top-4 right-4 w-32 h-32 border-t-2 border-r-2 border-amber-200 opacity-20"></div>
             <div className="absolute bottom-4 left-4 w-32 h-32 border-b-2 border-l-2 border-amber-200 opacity-20"></div>
             
@@ -67,10 +69,20 @@ const MotherArchitect = () => {
             <h1 className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-800 via-rose-700 to-amber-800 mb-8">
               את האדריכל לבית שלך!
             </h1>
-            <p className="text-xl text-amber-800 leading-relaxed">
-              כשאת מביטה בבניין מוגמר, נפעמת מיופיו, את ודאי מבינה, כי לא ביום אחד נסתיימה בנייתו. 
-              הבית הפרטי שלך, וחינוך ילדייך הם מלאכה מורכבת הפולשת על תחומים רבים, ודורשת זמן רב.
-            </p>
+            <div className="text-xl text-amber-800 leading-relaxed space-y-4">
+              <p>
+                כשאת מביטה בבניין מוגמר, נפעמת מיופיו, את ודאי מבינה, כי לא ביום אחד נסתיימה בנייתו.
+                הבית הפרטי שלך, וחינוך ילדייך הם מלאכה מורכבת הפולשת על תחומים רבים, ודורשת זמן רב.
+              </p>
+              <p>
+                ההתחלה בחינוך הילדים היא מיקוד מבט והסתכלות נכונה, להבין כמה כח יש בך, ועד כמה את רבת
+                פעלים ויכולה לפלוש על תחומים מרובים.
+              </p>
+              <p>
+                את יוצקת יסודות בליבם ובנפשם של ילדייך - יסודות של תורה ויראת שמים טהורה. 
+                ערכים, מידות טובות, ודרך ארץ.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -94,11 +106,6 @@ const MotherArchitect = () => {
                   <SketchIcon>
                     <Heart className="w-16 h-16 text-rose-400" />
                   </SketchIcon>
-                  <div className="absolute top-0 right-0">
-                    <SketchIcon>
-                      <Compass className="w-6 h-6 text-amber-400" />
-                    </SketchIcon>
-                  </div>
                 </div>
               </div>
               <p className="text-3xl text-amber-900 mt-8 leading-relaxed">
@@ -126,7 +133,9 @@ const MotherArchitect = () => {
                     </div>
                     <h3 className="text-3xl font-bold text-amber-900">{role.title}</h3>
                   </div>
-                  <p className="text-lg text-amber-800 leading-relaxed">{role.content}</p>
+                  <div className="text-lg text-amber-800 leading-relaxed space-y-4">
+                    {role.content}
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,7 +147,7 @@ const MotherArchitect = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-rose-50 rounded-3xl"></div>
           <div className="relative p-12 rounded-3xl border border-amber-100">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-amber-900">יסודות הבית שלך</h2>
+              <h2 className="text-4xl font-bold text-amber-900">מסלול של צמיחה</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {values.map((item, index) => (
@@ -177,14 +186,20 @@ const MotherArchitect = () => {
                 <Star className="w-16 h-16 text-amber-400 mx-auto mb-8" />
               </SketchIcon>
             </div>
-            <p className="text-3xl text-amber-900 mb-8 leading-relaxed">
-              בדרך הסלולה הזו את מגיעה לחיבור פנימי עמוק בינך לבין ילדייך.
-              <br />
-              בהסתכלות מעמיקה את מבינה עד כמה גדולה הזכות להיות אמא!
-            </p>
-            <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-rose-700">
-              ואת זכית!
-            </p>
+            <div className="space-y-6">
+              <p className="text-xl text-amber-800 leading-relaxed">
+                באמונה שלך בתפקיד שנתן לך הבורא, ובשימוש בכלים שטבע בך מלכו של עולם,
+                בתוספת של מנה עיקרית מלאה דמעות ותפילות עד כיסא הכבוד, כל רגע ויום מחדש.
+              </p>
+              <p className="text-3xl font-bold text-amber-900 mb-8 leading-relaxed">
+                בדרך הסלולה הזו את מגיעה לחיבור פנימי עמוק בינך לבין ילדייך.
+                <br />
+                בהסתכלות מעמיקה את מבינה עד כמה גדולה הזכות להיות אמא!
+              </p>
+              <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-rose-700">
+                ואת זכית!
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -207,7 +222,10 @@ const roles = [
       </div>
     ),
     title: "אדריכלית הבית",
-    content: "את האדריכל הראשי, מאשרת את הבניה וחותמת על אישורי הבניה, הפועל הפשוט, יוצקת היסודות ומנווטת את המנוף. כמובן שאת גם מעצבת פנים והמארחת בחנוכת הבית."
+    content: [
+      "את האדריכל הראשי, מאשרת את הבניה וחותמת על אישורי הבניה, הפועל הפשוט, יוצקת היסודות ומנווטת את המנוף. כמובן שאת גם מעצבת פנים והמארחת בחנוכת הבית.",
+      "בחושים האימהיים שלך את מעצבת את רצונם הפנימי לעבר דרך הישר ולבחור נכון. והם המראה שלך - להשקעה בטוחה."
+    ].map((text, i) => <p key={i}>{text}</p>)
   },
   {
     icon: (
@@ -223,7 +241,10 @@ const roles = [
       </div>
     ),
     title: "אדריכלית הנשמה",
-    content: "את משרטטת את חדרי ליבם (מותר ואסור), בוחרת היכן ימוקם מקום משחקם בפנים (הבית) או בחוץ (חברים, גינה). את אחראית על הניווט בין מילה בונה/מחמאה או גבול/הענשה."
+    content: [
+      "את משרטטת את חדרי ליבם (מותר ואסור), בוחרת היכן ימוקם מקום משחקם בפנים (הבית) או בחוץ (חברים, גינה).",
+      "את אחראית על הניווט בין מילה בונה/מחמאה או גבול/הענשה. את מחזיקה בהגה וביכולותייך ממנפת את ילדייך - מסייעת להם לגדול לצמוח ולהתעלות מעל."
+    ].map((text, i) =>].map((text, i) => <p key={i}>{text}</p>)
   }
 ];
 
@@ -234,7 +255,7 @@ const values = [
   },
   {
     icon: <SketchIcon><Sun className="w-10 h-10 text-amber-600 stroke-2" /></SketchIcon>,
-    text: "אהבה - המון חיזוקים/מילה טובה/ חיבוק"
+    text: "אהבה - המון חיזוקים, מילה טובה, חיבוק"
   },
   {
     icon: <SketchIcon><Book className="w-10 h-10 text-amber-700 stroke-2" /></SketchIcon>,
@@ -242,7 +263,7 @@ const values = [
   },
   {
     icon: <SketchIcon><Compass className="w-10 h-10 text-rose-600 stroke-2" /></SketchIcon>,
-    text: "הכנעה - את הכעס והרוגז ובמקביל בחורת לשנות אוירה"
+    text: "הכנעה - את הכעס והרוגז ובמקביל בחירה לשנות אווירה"
   }
 ];
 
