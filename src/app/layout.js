@@ -3,6 +3,9 @@ import './globals.css';
 export const metadata = {
   title: 'את האדריכל לבית שלך!',
   description: 'בונה באהבה • מעצבת בחכמה • מובילה בעוצמה',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
