@@ -6,7 +6,6 @@ import {
   Ruler, CircleDot, Triangle
 } from 'lucide-react';
 
-// Sketch Icon Component
 const SketchIcon = ({ children, size = "normal" }) => {
   const sizeClasses = size === "large" ? "opacity-80" : "opacity-90";
   return (
@@ -29,83 +28,26 @@ const MotherArchitect = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-rose-50 to-amber-50 p-8" dir="rtl">
       <div className="max-w-6xl mx-auto">
-        {/* Header with Architectural Elements */}
         <div className="relative mb-20">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-100 via-rose-100 to-amber-100 rounded-3xl opacity-20"></div>
           <div className="relative bg-white rounded-3xl p-16 text-center border border-amber-100 shadow-xl overflow-hidden">
-            {/* Architectural Corner Details */}
             <div className="absolute top-4 right-4 w-32 h-32 border-t-2 border-r-2 border-amber-200 opacity-20"></div>
             <div className="absolute bottom-4 left-4 w-32 h-32 border-b-2 border-l-2 border-amber-200 opacity-20"></div>
             
-            {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 transform -translate-y-1/4 translate-x-1/4 opacity-10">
-              <SketchIcon size="large">
-                <Home className="w-32 h-32 text-amber-300" />
-              </SketchIcon>
-            </div>
-            <div className="absolute bottom-0 left-0 transform translate-y-1/4 -translate-x-1/4 opacity-10">
-              <SketchIcon size="large">
-                <Compass className="w-32 h-32 text-rose-300" />
-              </SketchIcon>
-            </div>
-            
-            {/* Crown with Architectural Elements */}
-            <div className="relative inline-block mb-6">
-              <div className="relative">
-                <SketchIcon>
-                  <Crown className="w-20 h-20 text-amber-400 stroke-2" />
-                </SketchIcon>
-                <div className="absolute -top-2 -right-2">
-                  <SketchIcon>
-                    <Ruler className="w-6 h-6 text-amber-300 transform rotate-45" />
-                  </SketchIcon>
-                </div>
-                <div className="absolute -top-2 -left-2">
-                  <SketchIcon>
-                    <Compass className="w-6 h-6 text-amber-300 transform -rotate-45" />
-                  </SketchIcon>
-                </div>
-              </div>
-            </div>
-
-            <h1 className="text-6xl md:text-7xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-800 via-rose-700 to-amber-800 mb-8 tracking-wide">
+            <h1 className="text-6xl md:text-7xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-800 via-rose-700 to-amber-800 mb-8">
               את האדריכל לבית שלך!
             </h1>
-            <p className="text-2xl text-amber-800 font-serif italic tracking-wider">
-              בונה באהבה • מעצבת בחכמה • מובילה בעוצמה
+            
+            <p className="text-xl text-amber-800 leading-relaxed mb-8">
+              כשאת מביטה בבניין מוגמר, נפעמת מיופיו, את ודאי מבינה, כי לא ביום אחד נסתיימה בנייתו. הבית הפרטי שלך, וחינוך ילדייך הם מלאכה מורכבת הפולשת על תחומים רבים, ודורשת זמן רב.
             </p>
           </div>
         </div>
 
-        {/* Empowerment Quote */}
         <div className="relative mb-20">
           <div className="bg-white rounded-3xl p-12 shadow-xl border border-amber-100">
-            {/* Architectural Details */}
-            <div className="absolute -top-6 right-8 transform -rotate-45">
-              <SketchIcon>
-                <Triangle className="w-12 h-12 text-amber-300" />
-              </SketchIcon>
-            </div>
-            <div className="absolute -top-6 left-8 transform rotate-45">
-              <SketchIcon>
-                <Ruler className="w-12 h-12 text-rose-300" />
-              </SketchIcon>
-            </div>
-            
-            <div className="text-center relative">
-              <div className="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2">
-                <div className="relative">
-                  <SketchIcon>
-                    <Heart className="w-16 h-16 text-rose-400" />
-                  </SketchIcon>
-                  <div className="absolute top-0 right-0">
-                    <SketchIcon>
-                      <Compass className="w-6 h-6 text-amber-400" />
-                    </SketchIcon>
-                  </div>
-                </div>
-              </div>
-              <p className="text-3xl text-amber-900 font-serif mt-8 leading-relaxed">
+            <div className="text-center">
+              <p className="text-3xl text-amber-900 font-serif leading-relaxed">
                 אל תמעיטי בערכך!
                 <br />
                 <span className="font-bold">האמיני בכוחות הטמונים בך וביכולותייך!</span>
@@ -114,7 +56,6 @@ const MotherArchitect = () => {
           </div>
         </div>
 
-        {/* Role Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
           {roles.map((role, index) => (
             <div key={index} className="group">
@@ -130,14 +71,13 @@ const MotherArchitect = () => {
                     </div>
                     <h3 className="text-3xl font-serif font-bold text-amber-900">{role.title}</h3>
                   </div>
-                  <p className="text-lg text-amber-800 leading-relaxed font-medium">{role.content}</p>
+                  <p className="text-lg text-amber-800 leading-relaxed">{role.content}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Values Section */}
         <div className="relative mb-20">
           <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-rose-50 rounded-3xl"></div>
           <div className="relative p-12 rounded-3xl border border-amber-100">
@@ -145,15 +85,13 @@ const MotherArchitect = () => {
               <h2 className="text-4xl font-serif font-bold text-amber-900">יסודות הבית שלך</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {values.map((item, index) => (
-                <div key={index} 
-                     className="bg-white bg-opacity-95 backdrop-blur-md rounded-2xl p-8 border border-amber-100 shadow-lg 
-                              transform transition-all duration-300 hover:scale-102">
+              {values.map((value, index) => (
+                <div key={index} className="bg-white bg-opacity-95 backdrop-blur-md rounded-2xl p-8 border border-amber-100 shadow-lg transform transition-all duration-300 hover:scale-102">
                   <div className="flex items-center gap-6">
                     <div className="p-4 bg-gradient-to-br from-amber-50 to-rose-50 rounded-xl border border-amber-100 shadow-inner">
-                      {item.icon}
+                      {value.icon}
                     </div>
-                    <p className="text-xl text-amber-800 font-medium">{item.text}</p>
+                    <p className="text-xl text-amber-800">{value.text}</p>
                   </div>
                 </div>
               ))}
@@ -161,27 +99,9 @@ const MotherArchitect = () => {
           </div>
         </div>
 
-        {/* Final Blessing */}
         <div className="relative text-center">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-200 via-rose-200 to-amber-200 rounded-3xl opacity-20"></div>
-          <div className="relative bg-white rounded-3xl p-16 border border-amber-100 shadow-xl overflow-hidden">
-            {/* Architectural Details */}
-            <div className="absolute top-0 right-0 transform -translate-y-1/2 translate-x-1/2 opacity-10">
-              <SketchIcon>
-                <Triangle className="w-32 h-32 text-amber-300" />
-              </SketchIcon>
-            </div>
-            <div className="absolute bottom-0 left-0 transform translate-y-1/2 -translate-x-1/2 opacity-10">
-              <SketchIcon>
-                <Ruler className="w-32 h-32 text-rose-300" />
-              </SketchIcon>
-            </div>
-            
-            <div className="relative">
-              <SketchIcon>
-                <Star className="w-16 h-16 text-amber-400 mx-auto mb-8" />
-              </SketchIcon>
-            </div>
+          <div className="relative bg-white rounded-3xl p-16 border border-amber-100 shadow-xl">
             <p className="text-3xl font-serif text-amber-900 mb-8 leading-relaxed">
               בהסתכלות מעמיקה את מבינה עד כמה גדולה הזכות להיות אמא!
             </p>
@@ -202,58 +122,40 @@ const roles = [
         <SketchIcon>
           <Home className="w-12 h-12 text-amber-700 stroke-[1.5]" />
         </SketchIcon>
-        <div className="absolute -bottom-2 -right-2">
-          <SketchIcon>
-            <Compass className="w-8 h-8 text-rose-400" />
-          </SketchIcon>
-        </div>
       </div>
     ),
-    title: "אדריכלית הנשמה",
-    content: "את משרטטת את חדרי ליבם בעדינות אין קץ, בוחרת בתבונה היכן ימוקם כל רגש, כל ערך, כל חלום שיצמח"
+    title: "אדריכלית הבית",
+    content: "את האדריכל הראשי, מאשרת את הבניה וחותמת על אישורי הבניה, הפועל הפשוט, יוצקת היסודות ומנווטת את המנוף. כמובן שאת גם מעצבת פנים והמארחת בחנוכת הבית."
   },
   {
     icon: (
       <div className="relative">
         <SketchIcon>
-          <Shield className="w-12 h-12 text-amber-700 stroke-[1.5]" />
+          <Heart className="w-12 h-12 text-rose-600 stroke-[1.5]" />
         </SketchIcon>
-        <div className="absolute -bottom-2 -right-2">
-          <SketchIcon>
-            <Ruler className="w-8 h-8 text-amber-500" />
-          </SketchIcon>
-        </div>
       </div>
     ),
-    title: "מעצבת העתיד",
-    content: "בידייך הכוח להעניק להם כלים לחיים מלאי משמעות, לבנות את עולמם הפנימי באהבה אינסופית"
+    title: "אדריכלית הנשמה",
+    content: "את משרטטת את חדרי ליבם בעדינות אין קץ (מותר ואסור), בוחרת בתבונה היכן ימוקם כל רגש, מקום משחקם בפנים (הבית) או בחוץ (חברים, גינה)."
   }
 ];
 
 const values = [
   {
-    icon: <SketchIcon>
-      <Heart className="w-10 h-10 text-rose-600 stroke-2" />
-    </SketchIcon>,
-    text: "יוצקת יסודות של אהבה ואמונה בכל צעד"
+    icon: <SketchIcon><Heart className="w-10 h-10 text-rose-600 stroke-2" /></SketchIcon>,
+    text: "השלמה - עוזרת להם להוסיף עוד חלק באישיותם"
   },
   {
-    icon: <SketchIcon>
-      <Sun className="w-10 h-10 text-amber-600 stroke-2" />
-    </SketchIcon>,
-    text: "מאירה את דרכם באור של חכמה ותבונה"
+    icon: <SketchIcon><Sun className="w-10 h-10 text-amber-600 stroke-2" /></SketchIcon>,
+    text: "אהבה - המון חיזוקים, מילה טובה וחיבוק"
   },
   {
-    icon: <SketchIcon>
-      <Book className="w-10 h-10 text-amber-700 stroke-2" />
-    </SketchIcon>,
-    text: "מעניקה כלים לחיים של תורה ויראת שמים"
+    icon: <SketchIcon><Book className="w-10 h-10 text-amber-700 stroke-2" /></SketchIcon>,
+    text: "קבלה - את הטוב שבהם והקצת פחות ואת הקשיים המלווים בחינוכם"
   },
   {
-    icon: <SketchIcon>
-      <Compass className="w-10 h-10 text-rose-600 stroke-2" />
-    </SketchIcon>,
-    text: "מנווטת במפת החיים עם אהבה אינסופית"
+    icon: <SketchIcon><Compass className="w-10 h-10 text-rose-600 stroke-2" /></SketchIcon>,
+    text: "הכנעה - את הכעס והרוגז ובמקביל בחירה לשנות אווירה"
   }
 ];
 
