@@ -1,4 +1,4 @@
-import React from 'react';
+	import React from 'react';
 import { 
   Crown, Heart, Sparkles, Sun, Shield, 
   Compass, Book, Home, Star, Coffee,
@@ -82,18 +82,20 @@ const MotherArchitect = () => {
               </p>
             </div>
           </div>
-        </div>
-{/* Empowerment Quote - with better heart positioning */}
+        </div>{/* Empowerment Quote with floating heart */}
 <div className="relative mb-20">
-  {/* Heart positioned higher up */}
-  <div className="absolute left-1/2 transform -translate-x-1/2 -top-10 z-20">
-    <SketchIcon>
-      <Heart className="w-24 h-24 text-rose-400" />
-    </SketchIcon>
+  {/* The heart container */}
+  <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2" style={{ top: "-40px" }}>
+    <div className="relative" style={{ zIndex: 50 }}>
+      <SketchIcon>
+        <Heart className="w-28 h-28 text-rose-400" />
+      </SketchIcon>
+    </div>
   </div>
 
-  {/* Main quote box */}
+  {/* Quote container */}
   <div className="relative bg-white rounded-3xl px-12 pt-16 pb-12 shadow-xl border border-amber-100">
+    {/* Decorative triangles */}
     <div className="absolute -top-6 right-8 transform -rotate-45">
       <SketchIcon>
         <Triangle className="w-12 h-12 text-amber-300 opacity-40" />
@@ -104,7 +106,8 @@ const MotherArchitect = () => {
         <Ruler className="w-12 h-12 text-rose-300 opacity-40" />
       </SketchIcon>
     </div>
-    
+
+    {/* Quote text */}
     <div className="text-center">
       <p className="text-3xl text-amber-900 leading-relaxed">
         אל תמעיטי בערכך!
