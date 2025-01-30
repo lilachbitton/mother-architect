@@ -1,4 +1,27 @@
 import './globals.css';
+import localFont from 'next/font/local';
+
+const frank = localFont({
+  src: [
+    {
+      path: '../../public/fonts/FrankRuhlLibre-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/FrankRuhlLibre-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/FrankRuhlLibre-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-frank',
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'את האדריכל לבית שלך!',
@@ -10,9 +33,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="he" dir="rtl">
+    <html lang="he" dir="rtl" className={frank.variable}>
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
       </head>
       <body className="font-frank">
         {children}
