@@ -6,7 +6,6 @@ import {
   Ruler, CircleDot, Triangle
 } from 'lucide-react';
 
-// SketchIcon Component - משאירים בדיוק כמו שהיה
 const SketchIcon = ({ children, size = "normal" }) => {
   const sizeClasses = size === "large" ? "opacity-80" : "opacity-90";
   return (
@@ -33,7 +32,6 @@ const MotherArchitect = () => {
         <div className="relative mb-20">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-100 via-rose-100 to-amber-100 rounded-3xl opacity-20"></div>
           <div className="relative bg-white rounded-3xl p-16 text-center border border-amber-100 shadow-xl overflow-hidden">
-            {/* שומרים על כל האלמנטים העיצוביים */}
             <div className="absolute top-4 right-4 w-32 h-32 border-t-2 border-r-2 border-amber-200 opacity-20"></div>
             <div className="absolute bottom-4 left-4 w-32 h-32 border-b-2 border-l-2 border-amber-200 opacity-20"></div>
             
@@ -86,9 +84,10 @@ const MotherArchitect = () => {
           </div>
         </div>
 
-        {/* Empowerment Quote */}
+        {/* Empowerment Quote - Updated with overlapping heart */}
         <div className="relative mb-20">
-          <div className="bg-white rounded-3xl p-12 shadow-xl border border-amber-100">
+          <div className="relative bg-white rounded-3xl p-12 shadow-xl border border-amber-100">
+            {/* Decorative elements */}
             <div className="absolute -top-6 right-8 transform -rotate-45">
               <SketchIcon>
                 <Triangle className="w-12 h-12 text-amber-300" />
@@ -100,15 +99,19 @@ const MotherArchitect = () => {
               </SketchIcon>
             </div>
             
-            <div className="text-center relative">
-              <div className="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2">
+            {/* Heart and Text Container */}
+            <div className="text-center relative pt-8">
+              {/* Overlapping Heart */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3/4 z-10">
                 <div className="relative">
                   <SketchIcon>
-                    <Heart className="w-16 h-16 text-rose-400" />
+                    <Heart className="w-20 h-20 text-rose-400" />
                   </SketchIcon>
                 </div>
               </div>
-              <p className="text-3xl text-amber-900 mt-8 leading-relaxed">
+              
+              {/* Text with padding for heart overlap */}
+              <p className="text-3xl text-amber-900 mt-8 leading-relaxed relative z-0">
                 אל תמעיטי בערכך!
                 <br />
                 <span className="font-bold">האמיני בכוחות הטמונים בך וביכולותייך!</span>
@@ -243,8 +246,8 @@ const roles = [
     title: "אדריכלית הנשמה",
     content: [
       "את משרטטת את חדרי ליבם (מותר ואסור), בוחרת היכן ימוקם מקום משחקם בפנים (הבית) או בחוץ (חברים, גינה).",
-      "את אחראית על הניווט בין מילה בונה/מחמאה או גבול/הענשה. את מחזיקה בהגה וביכולותייך ממנפת את ילדייך - מסייעת להם לגדול לצמוח ולהתעלות מעל."
-].map((text, i) => <p key={i}>{text}</p>)
+"את אחראית על הניווט בין מילה בונה/מחמאה או גבול/הענשה. את מחזיקה בהגה וביכולותייך ממנפת את ילדייך - מסייעת להם לגדול לצמוח ולהתעלות מעל."
+    ].map((text, i) => <p key={i}>{text}</p>)
   }
 ];
 
@@ -268,3 +271,8 @@ const values = [
 ];
 
 export default MotherArchitect;
+
+
+
+
+
