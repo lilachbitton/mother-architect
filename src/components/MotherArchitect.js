@@ -83,42 +83,37 @@ const MotherArchitect = () => {
             </div>
           </div>
         </div>
+{/* Empowerment Quote - with better heart positioning */}
+<div className="relative mb-20">
+  {/* Heart positioned higher up */}
+  <div className="absolute left-1/2 transform -translate-x-1/2 -top-10 z-20">
+    <SketchIcon>
+      <Heart className="w-24 h-24 text-rose-400" />
+    </SketchIcon>
+  </div>
 
-        {/* Empowerment Quote - Updated with overlapping heart */}
-        <div className="relative mb-20">
-          <div className="relative bg-white rounded-3xl p-12 shadow-xl border border-amber-100">
-            {/* Decorative elements */}
-            <div className="absolute -top-6 right-8 transform -rotate-45">
-              <SketchIcon>
-                <Triangle className="w-12 h-12 text-amber-300" />
-              </SketchIcon>
-            </div>
-            <div className="absolute -top-6 left-8 transform rotate-45">
-              <SketchIcon>
-                <Ruler className="w-12 h-12 text-rose-300" />
-              </SketchIcon>
-            </div>
-            
-            {/* Heart and Text Container */}
-            <div className="text-center relative pt-8">
-              {/* Overlapping Heart */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3/4 z-10">
-                <div className="relative">
-                  <SketchIcon>
-                    <Heart className="w-20 h-20 text-rose-400" />
-                  </SketchIcon>
-                </div>
-              </div>
-              
-              {/* Text with padding for heart overlap */}
-              <p className="text-3xl text-amber-900 mt-8 leading-relaxed relative z-0">
-                אל תמעיטי בערכך!
-                <br />
-                <span className="font-bold">האמיני בכוחות הטמונים בך וביכולותייך!</span>
-              </p>
-            </div>
-          </div>
-        </div>
+  {/* Main quote box */}
+  <div className="relative bg-white rounded-3xl px-12 pt-16 pb-12 shadow-xl border border-amber-100">
+    <div className="absolute -top-6 right-8 transform -rotate-45">
+      <SketchIcon>
+        <Triangle className="w-12 h-12 text-amber-300 opacity-40" />
+      </SketchIcon>
+    </div>
+    <div className="absolute -top-6 left-8 transform rotate-45">
+      <SketchIcon>
+        <Ruler className="w-12 h-12 text-rose-300 opacity-40" />
+      </SketchIcon>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-3xl text-amber-900 leading-relaxed">
+        אל תמעיטי בערכך!
+        <br />
+        <span className="font-bold">האמיני בכוחות הטמונים בך וביכולותייך!</span>
+      </p>
+    </div>
+  </div>
+</div>
 
         {/* Role Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
